@@ -1,0 +1,85 @@
+---
+import Footer from "./Footer.astro";
+import Header from "./Header.astro";
+import "../../styles/global.css";
+
+// Props simplificadas
+const { title, description } = Astro.props;
+
+const siteTitle = "Jalieza Turismo";
+const siteDescription =
+  "Descubre la belleza de Jalieza, Oaxaca. Atractivos turísticos, cultura y tradiciones.";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>
+      {title ? `${title} | ${siteTitle}` : siteTitle}
+    </title>
+
+    <meta
+      name="description"
+      content={description ? description : siteDescription}
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Gobierno Municipal de Jalieza, Oaxaca" />
+    <meta
+      name="keywords"
+      content="Jalieza, Oaxaca, turismo, cultura, México, atractivos turísticos, gastronomía, hoteles"
+    />
+
+    <!-- Open Graph para redes sociales -->
+    <meta
+      property="og:title"
+      content={title ? `${title} | ${siteTitle}` : siteTitle}
+    />
+    <meta
+      property="og:description"
+      content={description ? description : siteDescription}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta
+      property="og:image"
+      content={new URL("/background.webp", Astro.url)}
+    />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:site_name" content="Jalieza Turismo" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content={title ? `${title} | ${siteTitle}` : siteTitle}
+    />
+    <meta
+      name="twitter:description"
+      content={description ? description : siteDescription}
+    />
+    <meta
+      name="twitter:image"
+      content={new URL("/background.webp", Astro.url)}
+    />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/background.webp" as="image" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="site-layout bg-main">
+    <Header />
+    <main class="site-main">
+      <div class="bg-overlay">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

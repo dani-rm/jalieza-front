@@ -1,0 +1,255 @@
+/* =================================================================
+   JALIEZA TURISMO - ESTILOS GLOBALES OPTIMIZADOS
+   ================================================================= */
+
+/* ===== RESET CSS BASE ===== */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+html {
+  line-height: 1.5;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+  --primary-color: #862171;
+  --secondary-color: #9c27b0;
+  --accent-color: #ba68c8;
+  --text-color: #6e706f;
+  --background-color: #f5f5f5;
+  
+  /* Layout */
+  --max-content-width: 80rem;
+  --container-padding: 1rem;
+  
+  /* Sombras */
+  --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LAYOUT BASE GLOBAL ===== */
+.site-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-main {
+  flex: 1 1 0%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* ===== BACKGROUND PRINCIPAL ===== */
+.bg-main {
+  background-image: linear-gradient(rgba(134, 33, 114, 0), rgb(19, 3, 17)), url('/background.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.205);
+  backdrop-filter: blur(1px);
+  min-height: 100%;
+}
+
+/* ===== COMPONENTE GLASS REUTILIZABLE ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--glass-shadow);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+/* ===== TIPOGRAFÍA GLOBAL ===== */
+.page-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.625;
+  color: #4b5563;
+}
+
+.text-lead {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+/* Responsividad para títulos */
+@media (min-width: 640px) {
+  .page-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-title {
+    font-size: 3.75rem;
+  }
+}
+
+/* ===== BOTONES GLOBALES ===== */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: var(--card-shadow);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* ===== FOCUS GLOBAL ===== */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ===== GRID RESPONSIVE GLOBAL ===== */
+.grid-responsive {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =================================================================
+   COMPONENTES REUTILIZABLES
+   ================================================================= */
+
+/* Cards con efecto glass - REUTILIZABLE (usada en index.astro múltiples veces) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* =================================================================
+   ACCESIBILIDAD - FOCUS BÁSICO GLOBAL
+   ================================================================= */
+
+/* Focus básico para botones - GLOBAL */
+button:focus {
+  outline: 2px solid var(--primary-color); 
+  outline-offset: 2px;
+}
+
+/* Focus básico para enlaces - GLOBAL */
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 0.25rem; /* 4px */
+}
+
+/* 
+NOTA: Este archivo contiene solo estilos GLOBALES que se reutilizan.
+- .bg-main: Background de toda la página
+- .bg-overlay: Overlay general
+- .glass-card: Usada en múltiples cards del index
+- Focus: Estados básicos para toda la página
+*/ 

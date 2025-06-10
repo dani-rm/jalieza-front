@@ -1,16 +1,152 @@
 ---
-
+import BaseLayout from "../components/base/BaseLayout.astro";
+import "../styles/pages/home.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Inicio" description="Bienvenido a Jalieza, Oaxaca">
+  <div class="home-main">
+    <div class="container">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <h1 class="hero-title">Bienvenido a Jalieza</h1>
+        <p class="hero-description">
+          Descubre la belleza, cultura y tradiciones de nuestro pueblo mágico en
+          el corazón de Oaxaca. Un destino donde la historia prehispánica se
+          encuentra con la hospitalidad oaxaqueña moderna.
+        </p>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="cards-section">
+        <div class="cards-grid">
+          <section class="feature-card" aria-labelledby="atractivos-title">
+            <h3 id="atractivos-title">Atractivos Turísticos</h3>
+            <p>
+              Explora lugares únicos, sitios arqueológicos y paisajes naturales
+              impresionantes. Desde zonas prehispánicas hasta miradores
+              naturales que te conectarán con la esencia de Oaxaca.
+            </p>
+          </section>
+
+          <section class="feature-card" aria-labelledby="gastronomia-title">
+            <h3 id="gastronomia-title">Gastronomía Local</h3>
+            <p>
+              Degusta los sabores auténticos de Oaxaca en nuestros restaurantes
+              tradicionales. Mole, tlayudas, mezcal y especialidades locales que
+              despiertan todos tus sentidos.
+            </p>
+          </section>
+
+          <section class="feature-card" aria-labelledby="hospitalidad-title">
+            <h3 id="hospitalidad-title">Hospitalidad</h3>
+            <p>
+              Disfruta de cómodos hoteles y la calidez de nuestra gente.
+              Hospédate en lugares que combinan comodidad moderna con el encanto
+              tradicional oaxaqueño.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2 class="cta-title">¿Listo para tu aventura?</h2>
+        <p class="cta-description">
+          Sumérgete en la experiencia completa de Jalieza, donde cada rincón
+          cuenta una historia y cada visita se convierte en un recuerdo
+          inolvidable.
+        </p>
+        <a
+          href="#contacto"
+          class="cta-button"
+          aria-label="Ir a la sección de contacto para planear tu visita a Jalieza"
+        >
+          Planear mi Visita
+        </a>
+      </div>
+
+      <!-- Contact Section -->
+      <section id="contacto" class="contact-section">
+        <div class="contact-header">
+          <h2 class="contact-title">Contáctanos</h2>
+          <p class="contact-description">
+            ¿Tienes preguntas sobre tu visita? Estamos aquí para ayudarte a
+            planear la experiencia perfecta en Jalieza.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Información de contacto</h3>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Ubicación</h4>
+                  <p>Jalieza, Oaxaca<br />México</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Teléfono</h4>
+                  <p>
+                    <a href="tel:+529511234567"> +52 (951) 123-4567 </a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9c-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <p>
+                    <a href="mailto:turismo@jalieza.gob.mx">
+                      turismo@jalieza.gob.mx
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                    ></path>
+                    <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Horarios</h4>
+                  <p>
+                    Lunes - Viernes: 9:00 - 17:00<br />Sábados: 9:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

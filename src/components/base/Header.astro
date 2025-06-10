@@ -1,0 +1,120 @@
+---
+import "../../styles/components/header.css";
+
+const { pathname } = Astro.url;
+
+const menu = [
+  {
+    name: "Inicio",
+    url: "/",
+  },
+  {
+    name: "Sobre el Pueblo",
+    url: "/sobre-el-pueblo",
+  },
+  {
+    name: "Historia",
+    url: "/historia",
+  },
+  {
+    name: "Artesanías",
+    url: "/artesanias",
+  },
+  {
+    name: "Blog",
+    url: "/blog",
+  },
+  {
+    name: "Contacto",
+    url: "/contacto",
+  },
+];
+---
+
+<header class="header">
+  <div class="container">
+    <nav class="header-nav" role="navigation" aria-label="Navegación principal">
+      <!-- Logo -->
+      <div>
+        <a href="/" class="logo">
+          <img class="logo-img" src="/jalieza-logo.svg" alt="Jalieza" />
+        </a>
+      </div>
+
+      <!-- Menu toggle para móvil -->
+      <button
+        id="mobile-menu-toggle"
+        class="mobile-menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menú de navegación"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <title>Icono de menú</title>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu" role="menubar">
+        {
+          menu.map((item) => (
+            <li role="none">
+              <a
+                href={item.url}
+                class={`nav-link ${
+                  (pathname === `${item.url}/` || pathname === item.url) &&
+                  "active"
+                }`}
+                role="menuitem"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu hidden"
+      aria-hidden="true"
+      role="menu"
+      aria-labelledby="mobile-menu-toggle"
+    >
+      <ul>
+        {
+          menu.map((item) => (
+            <li role="none">
+              <a
+                href={item.url}
+                class={`nav-link ${
+                  (pathname === `${item.url}/` || pathname === item.url) &&
+                  "active"
+                }`}
+                role="menuitem"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  import "../../scripts/mobile-menu.js";
+</script>
