@@ -98,7 +98,7 @@ img {
 
 /* ===== BACKGROUND PRINCIPAL ===== */
 .bg-main {
-  background-image: linear-gradient(rgba(134, 33, 114, 0), rgb(19, 3, 17)), url('/background.webp');
+  background-image: linear-gradient(rgba(37, 1, 30, 0.3), rgb(19, 3, 17)), url('/background.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -108,7 +108,7 @@ img {
 
 .bg-overlay {
   background: rgba(0, 0, 0, 0.205);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(3px) brightness(0.8); /* linea para desenfocar la imagen de fondo */
   min-height: 100%;
 }
 
