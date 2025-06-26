@@ -4,28 +4,28 @@
 
 /* ===== LAYOUT PRINCIPAL ===== */
 .home-main {
-  padding: 3rem 0;
+  padding: var(--spacing-2xl) 0;
 }
 
 /* ===== SECCIÓN HERO ===== */
 .hero-section {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-3xl);
   max-width: 75ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero-title {
-  font-size: 2.25rem;
-  font-weight: 700;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
   color: var(--background-color);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-xl);
 }
 
 .hero-description {
-  font-size: 1.25rem;
-  line-height: 1.75;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-loose);
   color: var(--background-color);
   max-width: 48rem;
   margin: 0 auto;
@@ -33,95 +33,123 @@
 
 /* ===== SECCIÓN DE CARDS ===== */
 .cards-section {
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .cards-grid {
   display: grid;
-  gap: 2rem;
+  gap: var(--spacing-xl);
   grid-template-columns: 1fr;
 }
 
+/* ===== TARJETAS CON EFECTO GLASSMORPHISM ===== */
 .feature-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
+  /* Usando variables globales pero manteniendo definición local para flexibilidad */
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--card-shadow-strong);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  text-align: center;
+}
+
+/* Efecto hover para las tarjetas */
+.feature-card:hover {
+  transform: var(--transform-hover-up-lg);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-lg);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.feature-icon svg {
+  width: 30px;
+  height: 30px;
 }
 
 .feature-card h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
 }
 
 .feature-card p {
-  font-size: 1rem;
-  line-height: 1.625;
-  color: #4b5563;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
 }
 
 /* ===== SECCIÓN CTA ===== */
 .cta-section {
   text-align: center;
   max-width: 65ch;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto var(--spacing-4xl) auto;
 }
 
 .cta-title {
-  font-size: 1.875rem;
-  font-weight: 700;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
   color: var(--background-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .cta-description {
-  font-size: 1.125rem;
+  font-size: var(--font-size-lg);
   color: var(--background-color);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-xl);
 }
 
 .cta-button {
+  /* Conectado a variables globales pero definido localmente */
   display: inline-block;
   background-color: var(--secondary-color);
   color: white;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+  box-shadow: var(--card-shadow);
   text-decoration: none;
 }
 
 .cta-button:hover {
-  background-color: #7b1fa2;
+  background-color: #7b1fa2; /* Puede sobrescribirse localmente si se necesita */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  transform: translateY(-1px);
+  transform: var(--transform-hover-up-sm);
 }
 
 /* ===== SECCIÓN CONTACTO ===== */
 .contact-section {
-  margin-top: 5rem;
-  padding-top: 4rem;
+  margin-top: var(--spacing-4xl);
+  padding-top: var(--spacing-3xl);
   border-top: 1px solid #e5e7eb;
 }
 
 .contact-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-2xl);
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 .contact-title {
-  font-size: 1.875rem;
-  font-weight: 700;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
   color: var(--background-color);
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .contact-description {
@@ -129,83 +157,80 @@
 }
 
 .contact-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
   max-width: 56rem;
   margin: 0 auto;
 }
 
-.contact-info {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border-radius: 0.75rem;
-  padding: 2rem;
-  max-width: 42rem;
-  margin: 0 auto;
+/* Estilo consistente con las características del pueblo */
+.contact-card {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.contact-info h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 1.5rem;
-}
-
-.contact-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+.contact-card:hover {
+  transform: var(--transform-hover-up-lg);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .contact-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: var(--secondary-color);
-  margin-top: 0.25rem;
-  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-lg);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-.contact-details h4 {
-  font-weight: 500;
-  color: #111827;
-  margin-bottom: 0.25rem;
+.contact-icon svg {
+  width: 30px;
+  height: 30px;
 }
 
-.contact-details p {
-  color: #4b5563;
-  line-height: 1.5;
+.contact-card h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
 }
 
-.contact-details a {
-  color: #4b5563;
-  transition: color 0.2s ease;
+.contact-card p {
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
 }
 
-.contact-details a:hover {
-  color: var(--secondary-color);
+.contact-card a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--primary-color);
 }
 
 /* ===== RESPONSIVIDAD ===== */
 @media (min-width: 640px) {
   .home-main {
-    padding: 4rem 0;
+    padding: var(--spacing-3xl) 0;
   }
   
   .hero-title {
-    font-size: 3rem;
+    font-size: var(--font-size-5xl);
   }
   
   .hero-description {
-    font-size: 1.25rem;
+    font-size: var(--font-size-xl);
   }
 }
 
@@ -217,11 +242,11 @@
 
 @media (min-width: 1024px) {
   .home-main {
-    padding: 5rem 0;
+    padding: var(--spacing-4xl) 0;
   }
   
   .hero-title {
-    font-size: 3.75rem;
+    font-size: var(--font-size-6xl);
   }
   
   .cards-grid {
@@ -231,29 +256,29 @@
 
 /* ===== SECCIÓN MAPA ===== */
 .map-section {
-  margin-top: 3rem;
+  margin-top: var(--spacing-2xl);
   text-align: center;
 }
 
 .map-section h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
   color: var(--background-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .map-container {
   max-width: 56rem;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: var(--spacing-lg);
 }
 
 .map-container iframe {
   width: 100%;
   height: 400px;
   border: 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
 }
 
 /* Responsividad para el mapa */
@@ -267,4 +292,11 @@
   .map-container iframe {
     height: 500px;
   }
-} 
+}
+
+/* 
+NOTA: Este archivo mantiene su independencia pero está conectado a variables globales.
+Para cambios globales: modificar variables en global.css
+Para cambios locales: sobrescribir propiedades específicas en este archivo
+Ejemplo: .cta-button:hover { background-color: #custom-color; }
+*/ 

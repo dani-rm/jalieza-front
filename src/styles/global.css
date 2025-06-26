@@ -49,21 +49,91 @@ img {
   display: block;
 }
 
-/* ===== VARIABLES GLOBALES ===== */
+/* ===== VARIABLES GLOBALES EXPANDIDAS ===== */
 :root {
+  /* Colores principales */
   --primary-color: #862171;
   --secondary-color: #9c27b0;
   --accent-color: #ba68c8;
   --text-color: #6e706f;
   --background-color: #f5f5f5;
   
+  /* Colores de texto */
+  --text-primary: #ffffff;
+  --text-secondary: #e5e7eb;
+  --text-dark: #111827;
+  --text-gray: #4b5563;
+  --text-light-gray: #6b7280;
+  
+  /* Efectos glass globales */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-bg-light: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: 10px;
+  --glass-blur-light: 4px;
+  
   /* Layout */
   --max-content-width: 80rem;
   --container-padding: 1rem;
   
-  /* Sombras */
+  /* Sombras globales */
   --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --card-shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.2);
+  
+  /* Espaciado estándar */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 5rem;
+  
+  /* Border radius estándar */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 50%;
+  
+  /* Transiciones estándar */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Tipografía */
+  --font-size-xs: 0.875rem;
+  --font-size-sm: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  
+  /* Line heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 1.75;
+  
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Hover transforms */
+  --transform-hover-up: translateY(-2px);
+  --transform-hover-up-sm: translateY(-1px);
+  --transform-hover-up-lg: translateY(-5px);
+  --transform-scale-hover: scale(1.02);
+  --transform-scale-hover-sm: scale(1.05);
 }
 
 /* ===== LAYOUT BASE GLOBAL ===== */
@@ -108,65 +178,71 @@ img {
 
 .bg-overlay {
   background: rgba(0, 0, 0, 0.205);
-  backdrop-filter: blur(3px) brightness(0.8); /* linea para desenfocar la imagen de fondo */
+  backdrop-filter: blur(3px) brightness(0.8);
   min-height: 100%;
 }
 
-/* ===== COMPONENTE GLASS REUTILIZABLE ===== */
+/* ===== COMPONENTE GLASS BASE REUTILIZABLE ===== */
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.glass-card:hover {
+  transform: var(--transform-hover-up-sm);
+  box-shadow: var(--card-shadow-hover);
 }
 
 /* ===== TIPOGRAFÍA GLOBAL ===== */
 .page-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-lg);
   text-align: center;
 }
 
 .section-title {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-md);
 }
 
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
   color: #1f2937;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .text-body {
-  font-size: 1rem;
-  line-height: 1.625;
-  color: #4b5563;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-gray);
 }
 
 .text-lead {
-  font-size: 1.25rem;
-  line-height: 1.75;
-  color: #4b5563;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-loose);
+  color: var(--text-gray);
 }
 
 /* Responsividad para títulos */
 @media (min-width: 640px) {
   .page-title {
-    font-size: 3rem;
+    font-size: var(--font-size-5xl);
   }
 }
 
 @media (min-width: 1024px) {
   .page-title {
-    font-size: 3.75rem;
+    font-size: var(--font-size-6xl);
   }
 }
 
@@ -175,10 +251,10 @@ img {
   display: inline-block;
   background-color: var(--secondary-color);
   color: white;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
   box-shadow: var(--card-shadow);
   text-decoration: none;
 }
@@ -186,10 +262,10 @@ img {
 .btn-primary:hover {
   background-color: var(--accent-color);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  transform: translateY(-1px);
+  transform: var(--transform-hover-up-sm);
 }
 
-/* ===== FOCUS GLOBAL ===== */
+/* ===== FOCUS GLOBAL (eliminando duplicados) ===== */
 button:focus,
 a:focus,
 input:focus,
@@ -198,10 +274,15 @@ textarea:focus {
   outline-offset: 2px;
 }
 
+/* Focus específico para enlaces */
+a:focus {
+  border-radius: var(--radius-sm);
+}
+
 /* ===== GRID RESPONSIVE GLOBAL ===== */
 .grid-responsive {
   display: grid;
-  gap: 2rem;
+  gap: var(--spacing-xl);
   grid-template-columns: 1fr;
 }
 
@@ -218,38 +299,32 @@ textarea:focus {
 }
 
 /* =================================================================
-   COMPONENTES REUTILIZABLES
+   UTILIDADES GLOBALES PARA COMPONENTES
    ================================================================= */
 
-/* Cards con efecto glass - REUTILIZABLE (usada en index.astro múltiples veces) */
-.glass-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+/* Clase base para iconos circulares */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-/* =================================================================
-   ACCESIBILIDAD - FOCUS BÁSICO GLOBAL
-   ================================================================= */
-
-/* Focus básico para botones - GLOBAL */
-button:focus {
-  outline: 2px solid var(--primary-color); 
-  outline-offset: 2px;
-}
-
-/* Focus básico para enlaces - GLOBAL */
-a:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-  border-radius: 0.25rem; /* 4px */
+/* Clase base para gradientes de texto */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* 
-NOTA: Este archivo contiene solo estilos GLOBALES que se reutilizan.
-- .bg-main: Background de toda la página
-- .bg-overlay: Overlay general
-- .glass-card: Usada en múltiples cards del index
-- Focus: Estados básicos para toda la página
+NOTA: Este archivo contiene solo estilos GLOBALES y variables reutilizables.
+Los componentes individuales pueden usar estas variables pero mantienen su independencia.
+Para sobrescribir globalmente, modifica las variables CSS.
+Para sobrescribir localmente, redefine la propiedad en el componente específico.
 */ 

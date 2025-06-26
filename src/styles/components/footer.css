@@ -3,9 +3,9 @@
    ================================================================= */
 
 .footer {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid var(--glass-border);
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -14,8 +14,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0;
-  gap: 1.5rem;
+  padding: var(--spacing-xl) 0;
+  gap: var(--spacing-lg);
 }
 
 .footer-info {
@@ -23,28 +23,28 @@
 }
 
 .footer-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: #1f2937; /* Personalizado - puede conectarse a var(--text-dark) si se desea */
+  margin-bottom: var(--spacing-xs);
 }
 
 .footer-description {
-  font-size: 0.875rem;
-  color: #4b5563;
-  line-height: 1.5;
+  font-size: var(--font-size-xs);
+  color: var(--text-gray);
+  line-height: var(--line-height-normal);
 }
 
 .footer-social {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--spacing-sm);
 }
 
 .footer-social-label {
-  font-size: 0.875rem;
-  color: #6b7280;
+  font-size: var(--font-size-xs);
+  color: var(--text-light-gray);
 }
 
 /* ===== RESPONSIVIDAD ===== */
@@ -64,7 +64,8 @@
 }
 
 /* 
-NOTA: Este archivo es independiente. 
-Puedes modificar estos valores sin afectar Header, Social u otros componentes.
-Ejemplo: Cambiar background a rgba(240, 240, 240, 0.95) para un gris más claro.
+NOTA: Este archivo está conectado a variables globales pero mantiene su independencia.
+- Para cambios globales: modificar variables en global.css
+- Para cambios locales: sobrescribir propiedades específicas aquí
+- Ejemplo: .footer { background: rgba(240, 240, 240, 0.95); } para un gris más claro personalizado
 */ 
