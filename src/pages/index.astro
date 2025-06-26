@@ -18,6 +18,14 @@ import "../styles/pages/home.css";
       <div class="cards-section">
         <div class="cards-grid">
           <section class="feature-card" aria-labelledby="atractivos-title">
+            <div class="feature-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"
+                ></path>
+                <path d="M5 16l3-4 2.25 3L14 11l4 5z"></path>
+              </svg>
+            </div>
             <h3 id="atractivos-title">Atractivos Turísticos</h3>
             <p>
               Conoce lugares llenos de historia y tradición, desde sitios con
@@ -27,6 +35,13 @@ import "../styles/pages/home.css";
           </section>
 
           <section class="feature-card" aria-labelledby="gastronomia-title">
+            <div class="feature-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.20-1.10-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"
+                ></path>
+              </svg>
+            </div>
             <h3 id="gastronomia-title">Gastronomía Local</h3>
             <p>
               Disfruta de los sabores auténticos de Oaxaca en nuestros
@@ -36,6 +51,14 @@ import "../styles/pages/home.css";
           </section>
 
           <section class="feature-card" aria-labelledby="hospitalidad-title">
+            <div class="feature-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l-5.5 9h11z"></path>
+                <circle cx="17.5" cy="17.5" r="4.5"></circle>
+                <path d="M3 13.5h8v8H3z"></path>
+                <path d="M12 16l4-7H8l4 7z"></path>
+              </svg>
+            </div>
             <h3 id="artesanias-title">Artesanías</h3>
             <p>
               Explora la rica herencia artesanal de Jalieza. Descubre los
@@ -74,62 +97,66 @@ import "../styles/pages/home.css";
         </div>
 
         <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Información de contacto</h3>
-            <div class="contact-items">
-              <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">
-                  <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="contact-details">
-                  <h4>Teléfono</h4>
-                  <p>
-                    <a href="tel:+5219511058379"> +52 (951) 105-8379 </a>
-                  </p>
-                </div>
-              </div>
-
-              <!-- <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">
-                  <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9c-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="contact-details">
-                  <h4>Email</h4>
-                  <p>
-                    <a href="mailto:turismo@jalieza.gob.mx">
-                      turismo@jalieza.gob.mx
-                    </a>
-                  </p>
-                </div>
-              </div> -->
-
-              <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">
-                  <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                    ></path>
-                    <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
-                  </svg>
-                </div>
-                <div class="contact-details">
-                  <h4>Horarios</h4>
-                  <p>
-                    Lunes - Viernes: 9:00 am - 5:00 pm<br />Sábados: 9:00 am -
-                    1:00 pm
-                  </p>
-                </div>
-              </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                ></path>
+              </svg>
             </div>
+            <h3>Teléfono</h3>
+            <p>
+              <a href="tel:+5219511058379">+52 (951) 105-8379</a>
+            </p>
           </div>
+
+          <!-- <div class="contact-card">
+            <div class="contact-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9c-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:turismo@jalieza.gob.mx">
+                turismo@jalieza.gob.mx
+              </a>
+            </p>
+          </div> -->
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                ></path>
+                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
+              </svg>
+            </div>
+            <h3>Horarios</h3>
+            <p>
+              Lunes - Viernes: 9:00 am - 5:00 pm<br />
+              Sábados: 9:00 am - 1:00 pm
+            </p>
+          </div>
+
+          <!-- <div class="contact-card">
+            <div class="contact-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Ubicación</h3>
+            <p>
+              Santo Tomás Jalieza<br />
+              Oaxaca, México
+            </p>
+          </div> -->
         </div>
 
         <!-- Map Section -->
