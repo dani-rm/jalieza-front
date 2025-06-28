@@ -1,5 +1,6 @@
 ---
 import "../../styles/components/header.css";
+import jaliezaLogo from "../../assets/logos/jalieza-logo.svg";
 
 const { pathname } = Astro.url;
 
@@ -37,7 +38,7 @@ const menu = [
       <!-- Logo -->
       <div>
         <a href="/" class="logo">
-          <img class="logo-img" src="/jalieza-logo.svg" alt="Jalieza" />
+          <img class="logo-img" src={jaliezaLogo.src} alt="Jalieza" />
         </a>
       </div>
 

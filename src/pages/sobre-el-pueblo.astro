@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../components/base/BaseLayout.astro";
 import "../styles/pages/sobre-el-pueblo.css";
+import pruebaImage from "../assets/images/gallery/atractivos/prueba.jpg";
 ---
 
 <BaseLayout
@@ -36,7 +37,7 @@ import "../styles/pages/sobre-el-pueblo.css";
           </div>
           <div class="info-image">
             <img
-              src="/assets/gallery/atractivos/paisaje-jalieza.jpg"
+              src={pruebaImage.src}
               alt="Paisaje montañoso de Jalieza, Oaxaca"
               loading="lazy"
             />
@@ -103,7 +104,7 @@ import "../styles/pages/sobre-el-pueblo.css";
         <div class="poblacion-grid">
           <div class="poblacion-image">
             <img
-              src="/assets/gallery/atractivos/comunidad-jalieza.jpg"
+              src={pruebaImage.src}
               alt="Comunidad de Jalieza en una celebración tradicional"
               loading="lazy"
             />
@@ -124,7 +125,7 @@ import "../styles/pages/sobre-el-pueblo.css";
             </p>
             <div class="poblacion-stats">
               <div class="stat-item">
-                <span class="stat-number">~2,500</span>
+                <span class="stat-number">~1,300</span>
                 <span class="stat-label">Habitantes</span>
               </div>
               <div class="stat-item">
@@ -146,7 +147,7 @@ import "../styles/pages/sobre-el-pueblo.css";
         <div class="atractivos-grid">
           <div class="atractivo-card">
             <img
-              src="/assets/gallery/atractivos/montanas-jalieza.jpg"
+              src={pruebaImage.src}
               alt="Montañas que rodean Jalieza"
               loading="lazy"
             />
@@ -162,7 +163,7 @@ import "../styles/pages/sobre-el-pueblo.css";
 
           <div class="atractivo-card">
             <img
-              src="/assets/gallery/atractivos/rio-jalieza.jpg"
+              src={pruebaImage.src}
               alt="Río que atraviesa Jalieza"
               loading="lazy"
             />
@@ -178,7 +179,7 @@ import "../styles/pages/sobre-el-pueblo.css";
 
           <div class="atractivo-card">
             <img
-              src="/assets/gallery/atractivos/flora-jalieza.jpg"
+              src={pruebaImage.src}
               alt="Flora nativa de Jalieza"
               loading="lazy"
             />
