@@ -1,0 +1,536 @@
+/* Estilos para la página "Artesanías" */
+
+.artesanias-main {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 3rem 0;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Imagen de Portada */
+.portada-section {
+  margin-bottom: 5rem;
+}
+
+.portada-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.portada-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portada-image:hover img {
+  transform: scale(1.05);
+}
+
+.portada-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(134, 33, 114, 0.281),
+    rgba(155, 39, 176, 0.082)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portada-image:hover .portada-overlay {
+  opacity: 1;
+}
+
+.portada-content {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.portada-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.portada-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Introducción */
+.intro-section {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Productos Destacados */
+.productos-section {
+  margin-bottom: 5rem;
+}
+
+.productos-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.producto-card {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.producto-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.producto-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.producto-card:hover .producto-image img {
+  transform: scale(1.05);
+}
+
+.producto-content {
+  padding: 1.5rem;
+}
+
+.producto-content h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.producto-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.producto-features {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.feature-tag {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Proceso de Creación */
+.proceso-section {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.proceso-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.proceso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.proceso-step {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proceso-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.step-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.proceso-step h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.proceso-step p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Características Especiales */
+.caracteristicas-section {
+  margin-bottom: 5rem;
+}
+
+.caracteristicas-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.caracteristicas-text h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.caracteristica-item {
+  margin-bottom: 2rem;
+}
+
+.caracteristica-item h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.caracteristica-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.caracteristicas-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.caracteristicas-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Artesanos */
+.artesanos-section {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.artesanos-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.artesanos-content {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.artesanos-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.artesanos-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.cta-button.secondary:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .intro-content h2,
+  .productos-section h2,
+  .proceso-section h2,
+  .caracteristicas-text h2,
+  .artesanos-section h2,
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+  
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .proceso-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .caracteristicas-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .artesanos-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .artesanias-main {
+    padding: 1rem 0;
+  }
+  
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .producto-card,
+  .proceso-step,
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .caracteristicas-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .portada-image {
+    height: 300px;
+  }
+  
+  .portada-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .portada-content p {
+    font-size: 1rem;
+  }
+} 

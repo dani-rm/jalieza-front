@@ -1,0 +1,356 @@
+---
+import BaseLayout from "../components/base/BaseLayout.astro";
+import "../styles/pages/artesanias.css";
+import pruebaImage from "../assets/images/gallery/atractivos/prueba.jpg";
+---
+
+<BaseLayout
+  title="Artesanías"
+  description="Descubre las hermosas artesanías textiles de Jalieza, Oaxaca. Conoce el arte tradicional del tejido zapoteca, desde el quexquémitl hasta los coloridos textiles con tintes naturales y símbolos prehispánicos."
+>
+  <div class="artesanias-main">
+    <div class="container">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <h1 class="hero-title">Artesanías de Jalieza</h1>
+        <p class="hero-description">
+          El arte ancestral del tejido zapoteca que preserva tradiciones
+          milenarias
+        </p>
+      </div>
+
+      <!-- Imagen de Portada -->
+      <section class="portada-section">
+        <div class="portada-image">
+          <img
+            src={pruebaImage.src}
+            alt="Artesanos de Santo Tomás Jalieza trabajando en sus telares tradicionales"
+            loading="lazy"
+          />
+          <div class="portada-overlay">
+            <div class="portada-content">
+              <h3>Tradición Viva</h3>
+              <p>
+                Manos expertas que preservan el legado ancestral del tejido
+                zapoteca
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introducción -->
+      <section class="intro-section">
+        <div class="intro-content">
+          <h2>Patrimonio Cultural de Oaxaca</h2>
+          <p>
+            Santo Tomás Jalieza, es reconocido por su rica tradición textil.
+            Esta práctica milenaria ha sido reconocida por la 65ª Legislatura
+            del Estado de Oaxaca, que declaró la iconografía, conocimientos y
+            técnicas de elaboración del telar de cintura —hecho con peine de
+            carrizo y malla de ixtle o cáñamo— como Patrimonio Cultural Material
+            e Inmaterial del Estado de Oaxaca.
+          </p>
+          <p>
+            Las y los artesanos de Santo Tomás Jalieza son verdaderos guardianes
+            de este legado, creando textiles únicos que reflejan la identidad,
+            cosmovisión y creatividad del pueblo zapoteca. Cada hilo tejido
+            cuenta una historia, cada color tiene un significado, y cada diseño
+            conecta el pasado con el presente.
+          </p>
+        </div>
+      </section>
+
+      <!-- Productos Destacados -->
+      <section class="productos-section">
+        <h2>Nuestras Creaciones</h2>
+        <div class="productos-grid">
+          <!-- Quexquémitl -->
+          <div class="producto-card">
+            <div class="producto-image">
+              <img
+                src="/assets/gallery/artesanias/quexquemitl.jpg"
+                alt="Quexquémitl tradicional de Jalieza"
+                loading="lazy"
+              />
+            </div>
+            <div class="producto-content">
+              <h3>Quexquémitl</h3>
+              <p>
+                Prenda tradicional femenina de gran valor cultural. Esta pieza
+                ceremonial representa la identidad zapoteca y se caracteriza por
+                sus intrincados diseños geométricos y colores simbólicos.
+              </p>
+              <div class="producto-features">
+                <span class="feature-tag">Ceremonial</span>
+                <span class="feature-tag">Tradicional</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cinturones -->
+          <div class="producto-card">
+            <div class="producto-image">
+              <img
+                src={pruebaImage.src}
+                alt="Cinturones artesanales de Jalieza"
+                loading="lazy"
+              />
+            </div>
+            <div class="producto-content">
+              <h3>Cinturones</h3>
+              <p>
+                Elaborados con técnicas de tejido tradicional, nuestros
+                cinturones combinan funcionalidad y belleza. Cada pieza presenta
+                patrones únicos que reflejan la rica herencia cultural zapoteca.
+              </p>
+              <div class="producto-features">
+                <span class="feature-tag">Funcional</span>
+                <span class="feature-tag">Colorido</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Caminos de Mesa -->
+          <div class="producto-card">
+            <div class="producto-image">
+              <img
+                src="/assets/gallery/artesanias/caminos-mesa.jpg"
+                alt="Caminos de mesa artesanales"
+                loading="lazy"
+              />
+            </div>
+            <div class="producto-content">
+              <h3>Caminos de Mesa</h3>
+              <p>
+                Piezas decorativas que transforman cualquier espacio. Tejidos
+                con patrones geométricos ancestrales y colores vibrantes que
+                aportan calidez y tradición a tu hogar.
+              </p>
+              <div class="producto-features">
+                <span class="feature-tag">Decorativo</span>
+                <span class="feature-tag">Hogar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cosmetiqueras -->
+          <div class="producto-card">
+            <div class="producto-image">
+              <img
+                src="/assets/gallery/artesanias/cosmetiqueras.jpg"
+                alt="Cosmetiqueras tejidas a mano"
+                loading="lazy"
+              />
+            </div>
+            <div class="producto-content">
+              <h3>Cosmetiqueras</h3>
+              <p>
+                Prácticas y hermosas, nuestras cosmetiqueras combinan utilidad
+                con arte tradicional. Perfectas para llevar contigo un pedazo de
+                la cultura zapoteca a donde vayas.
+              </p>
+              <div class="producto-features">
+                <span class="feature-tag">Práctica</span>
+                <span class="feature-tag">Portátil</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mantelitos Individuales -->
+          <div class="producto-card">
+            <div class="producto-image">
+              <img
+                src="/assets/gallery/artesanias/mantelitos.jpg"
+                alt="Mantelitos individuales tejidos"
+                loading="lazy"
+              />
+            </div>
+            <div class="producto-content">
+              <h3>Mantelitos Individuales</h3>
+              <p>
+                Cada comida se convierte en una celebración con nuestros
+                mantelitos individuales. Tejidos con amor y decorados con
+                símbolos que honran nuestras tradiciones ancestrales.
+              </p>
+              <div class="producto-features">
+                <span class="feature-tag">Mesa</span>
+                <span class="feature-tag">Elegante</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bolsas -->
+          <div class="producto-card">
+            <div class="producto-image">
+              <img
+                src="/assets/gallery/artesanias/bolsas.jpg"
+                alt="Bolsas artesanales de Jalieza"
+                loading="lazy"
+              />
+            </div>
+            <div class="producto-content">
+              <h3>Bolsas</h3>
+              <p>
+                Resistentes y hermosas, nuestras bolsas son compañeras perfectas
+                para el día a día. Cada una cuenta con diseños únicos que
+                reflejan la creatividad y maestría de nuestros artesanos.
+              </p>
+              <div class="producto-features">
+                <span class="feature-tag">Resistente</span>
+                <span class="feature-tag">Versátil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proceso de Creación -->
+      <section class="proceso-section">
+        <h2>El Arte del Tejido</h2>
+        <div class="proceso-grid">
+          <div class="proceso-step">
+            <div class="step-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Tintes Naturales</h3>
+            <p>
+              Utilizamos tintes extraídos de plantas, flores y minerales locales
+              para crear los vibrantes colores que caracterizan nuestros
+              textiles. Cada color tiene un significado especial en nuestra
+              cultura.
+            </p>
+          </div>
+
+          <div class="proceso-step">
+            <div class="step-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Técnicas Ancestrales</h3>
+            <p>
+              Cada pieza es creada utilizando técnicas de tejido transmitidas
+              por generaciones. Los patrones y métodos han sido preservados
+              fielmente desde tiempos prehispánicos.
+            </p>
+          </div>
+
+          <div class="proceso-step">
+            <div class="step-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Símbolos Prehispánicos</h3>
+            <p>
+              Cada diseño incorpora grecas y símbolos que narran historias
+              ancestrales. Estos patrones no solo decoran, sino que transmiten
+              la cosmovisión y sabiduría de nuestros antepasados.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Características Especiales -->
+      <section class="caracteristicas-section">
+        <div class="caracteristicas-content">
+          <div class="caracteristicas-text">
+            <h2>Lo que Hace Únicas Nuestras Artesanías</h2>
+            <div class="caracteristica-item">
+              <h3>Colores Vibrantes</h3>
+              <p>
+                Nuestros textiles se distinguen por sus colores intensos y
+                vibrantes, obtenidos exclusivamente de tintes naturales que
+                respetan el medio ambiente y mantienen vivas las tradiciones
+                ancestrales.
+              </p>
+            </div>
+            <div class="caracteristica-item">
+              <h3>Texturas Únicas</h3>
+              <p>
+                Cada pieza tiene una textura distintiva resultado de técnicas de
+                tejido específicas. La combinación de diferentes hilos y
+                patrones crea texturas que son tanto visuales como táctiles.
+              </p>
+            </div>
+            <div class="caracteristica-item">
+              <h3>Significado Cultural</h3>
+              <p>
+                Más que simples objetos decorativos, nuestras artesanías son
+                portadoras de historia, tradición y significado cultural. Cada
+                pieza conecta al portador con la rica herencia zapoteca.
+              </p>
+            </div>
+          </div>
+          <div class="caracteristicas-image">
+            <img
+              src="/assets/gallery/artesanias/proceso-tejido.jpg"
+              alt="Proceso de tejido tradicional en Jalieza"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Artesanos -->
+      <section class="artesanos-section">
+        <h2>Nuestros Maestros Artesanos</h2>
+        <div class="artesanos-content">
+          <p>
+            Detrás de cada pieza hay manos expertas que han dedicado su vida al
+            arte del tejido. Nuestros artesanos son los guardianes de una
+            tradición milenaria, quienes con paciencia y maestría transforman
+            hilos simples en obras de arte llenas de significado.
+          </p>
+          <p>
+            Cada artesano aporta su estilo personal mientras respeta las
+            técnicas tradicionales, creando piezas únicas que reflejan tanto la
+            herencia cultural como la creatividad individual.
+          </p>
+        </div>
+        <div class="artesanos-stats">
+          <div class="stat-card">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Artesanos Activos</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Años de Tradición</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Hecho a Mano</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>Lleva Contigo un Pedazo de Jalieza</h2>
+        <p>
+          Nuestras artesanías no son solo objetos hermosos, son portadoras de
+          historia y tradición. Te invitamos a conocer de cerca el trabajo de
+          nuestros artesanos y llevarte una pieza única llena de significado
+          cultural.
+        </p>
+        <div class="cta-buttons">
+          <a href="/historia" class="cta-button primary">
+            Conoce Nuestra Historia
+          </a>
+          <a href="/sobre-el-pueblo" class="cta-button secondary">
+            Visita Jalieza
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
