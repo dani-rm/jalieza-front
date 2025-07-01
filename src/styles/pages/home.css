@@ -131,6 +131,10 @@
 }
 
 /* ===== SECCIÓN CONTACTO ===== */
+html {
+  scroll-padding-top: 100px;
+  /* Ajusta el valor a la altura real de tu header en la sección contacto*/
+}
 .contact-section {
   margin-top: var(--spacing-4xl);
   padding-top: var(--spacing-3xl);
