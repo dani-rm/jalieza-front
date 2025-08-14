@@ -1,9 +1,62 @@
 ---
 import BaseLayout from "../components/base/BaseLayout.astro";
-import "../styles/pages/sobre-el-pueblo.css";
-import pruebaImage from "../assets/images/gallery/atractivos/prueba.jpg";
+// import "../styles/pages/sobre-el-pueblo.css";
+// import pruebaImage from "../assets/images/gallery/atractivos/prueba.jpg";
 ---
 
+<BaseLayout
+  title="Página no disponible"
+  description="Esta sección estará disponible próximamente"
+>
+  <div class="page-unavailable">
+    <div class="container">
+      <div class="unavailable-content">
+        <h1>Página no disponible</h1>
+        <p>Esta sección estará disponible próximamente.</p>
+        <a href="/" class="back-home">← Volver al inicio</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-unavailable {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .unavailable-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .unavailable-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .back-home {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #c32aff;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+
+  .back-home:hover {
+    background-color: #ff8ff9;
+  }
+</style>
+{
+  /* TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
 <BaseLayout
   title="Sobre el Pueblo"
   description="Conoce Jalieza, un pueblo mágico en Oaxaca lleno de tradición, cultura y belleza natural. Descubre su ubicación, historia y características únicas."
@@ -217,3 +270,5 @@ import pruebaImage from "../assets/images/gallery/atractivos/prueba.jpg";
     </div>
   </div>
 </BaseLayout>
+*/
+}
