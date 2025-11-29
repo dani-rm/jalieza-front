@@ -1,0 +1,25 @@
+---
+import { Picture } from "astro:assets";
+import bg from "../../assets/images/backgrounds/background.jpg";
+
+// Background decorativo optimizado con astro:assets
+// - Imagen decorativa: alt="" y aria-hidden
+// - Capa fija, cubre toda la vista
+// - Carga eager por ser above-the-fold
+// - Genera srcset (AVIF/WebP/JPEG) y múltiples tamaños
+const { overlay = true } = Astro.props;
+---
+
+<div class="site-bg" aria-hidden="true">
+    <Picture
+        src={bg}
+        alt=""
+        widths={[768, 1024, 1440, 1920, 2560]}
+        formats={["avif", "webp", "jpeg"]}
+        sizes="100vw"
+        loading="eager"
+        decoding="async"
+        class="site-bg-img"
+    />
+    {overlay && <div class="bg-overlay" aria-hidden="true" />}
+</div>

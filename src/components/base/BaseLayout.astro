@@ -1,10 +1,14 @@
 ---
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
+import Background from "./Background.astro";
+import { getImage } from "astro:assets";
+import ogBg from "../../assets/images/backgrounds/background.jpg";
 import "../../styles/global.css";
 
 // Props simplificadas
 const { title, description } = Astro.props;
+const og = await getImage({ src: ogBg, width: 1600, format: "webp" });
 
 const siteTitle = "Jalieza Turismo";
 const siteDescription =
@@ -46,10 +50,7 @@ const siteDescription =
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
-    <meta
-      property="og:image"
-      content={new URL("/background.webp", Astro.url)}
-    />
+    <meta property="og:image" content={new URL(og.src, Astro.url)} />
     <meta property="og:locale" content="es_MX" />
     <meta property="og:site_name" content="Jalieza Turismo" />
 
@@ -63,20 +64,18 @@ const siteDescription =
       name="twitter:description"
       content={description ? description : siteDescription}
     />
-    <meta
-      name="twitter:image"
-      content={new URL("/background.webp", Astro.url)}
-    />
+    <meta name="twitter:image" content={new URL(og.src, Astro.url)} />
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="/background.webp" as="image" />
+    <link rel="preload" href={og.src} as="image" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body class="site-layout bg-main">
+    <Background />
     <Header />
     <main class="site-main">
-      <div class="bg-overlay">
+      <div class="content-layer">
         <slot />
       </div>
     </main>
