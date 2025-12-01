@@ -14,13 +14,9 @@
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: var(--spacing-md);
 }
 
 .hero-description {
@@ -120,6 +116,28 @@
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
+}
+
+.intro-image {
+  margin-top: 2rem;
+}
+
+.intro-image img,
+.intro-image picture {
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.intro-image img:hover,
+.intro-image picture:hover {
+  transform: scale(1.02);
 }
 
 /* Productos Destacados */
@@ -451,7 +469,7 @@
 
 .cta-button.secondary {
   background: transparent;
-  color: var(--primary-color);
+  color: var(--text-primary);
   border-color: var(--primary-color);
 }
 
@@ -466,11 +484,11 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-description {
     font-size: 1.1rem;
   }
-  
+
   .intro-content h2,
   .productos-section h2,
   .proceso-section h2,
@@ -479,36 +497,36 @@
   .cta-section h2 {
     font-size: 2rem;
   }
-  
+
   .productos-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .proceso-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .caracteristicas-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .artesanos-stats {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .stat-card {
     min-width: 200px;
     width: 200px;
     height: 100px;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .cta-button {
     width: 100%;
     max-width: 300px;
@@ -520,52 +538,52 @@
   .artesanias-main {
     padding: 1rem 0;
   }
-  
+
   .hero-section {
     padding: 2rem 0;
   }
-  
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .productos-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .producto-card,
   .proceso-step,
   .stat-card {
     padding: 1.5rem;
   }
-  
+
   .caracteristicas-content {
     grid-template-columns: 1fr;
   }
-  
+
   .portada-image {
     height: 300px;
   }
-  
+
   .portada-content h3 {
     font-size: 1.5rem;
   }
-  
+
   .portada-content p {
     font-size: 1rem;
   }
-  
+
   .stat-card {
     min-width: 160px;
     width: 160px;
     height: 90px;
   }
-  
+
   .stat-number {
     font-size: 1.5rem;
   }
-  
+
   .stat-label {
     font-size: 0.8rem;
   }
-} 
+}

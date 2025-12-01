@@ -1,10 +1,13 @@
 ---
+import { Picture } from "astro:assets";
 import BaseLayout from "../components/base/BaseLayout.astro";
-// import "../styles/pages/artesanias.css";
-// import pruebaImage from "../assets/images/gallery/atractivos/prueba.jpg";
+import "../styles/pages/artesanias.css";
+import artesanias1 from "../assets/images/gallery/artesanias/artesanias1.png";
+import artesanias2 from "../assets/images/gallery/artesanias/artesanias2.jpg";
+import artesanias3 from "../assets/images/gallery/artesanias/artesanias3.jpg";
 ---
 
-<BaseLayout
+<!-- <BaseLayout
   title="Página no disponible"
   description="Esta sección estará disponible próximamente"
 >
@@ -54,12 +57,7 @@ import BaseLayout from "../components/base/BaseLayout.astro";
   .back-home:hover {
     background-color: #ff8ff9;
   }
-</style>
-
-{
-  /* 
-TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
-
+</style> -->
 <BaseLayout
   title="Artesanías"
   description="Descubre las hermosas artesanías textiles de Jalieza, Oaxaca. Conoce el arte tradicional del tejido zapoteca, desde el quexquémitl hasta los coloridos textiles con tintes naturales y símbolos prehispánicos."
@@ -78,10 +76,14 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
       <!-- Imagen de Portada -->
       <section class="portada-section">
         <div class="portada-image">
-          <img
-            src={pruebaImage.src}
+          <Picture
+            src={artesanias1}
             alt="Artesanos de Santo Tomás Jalieza trabajando en sus telares tradicionales"
-            loading="lazy"
+            widths={[600, 900, 1200, 1600]}
+            formats={["avif", "webp", "png"]}
+            sizes="100vw"
+            loading="eager"
+            decoding="async"
           />
           <div class="portada-overlay">
             <div class="portada-content">
@@ -114,20 +116,35 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
             cuenta una historia, cada color tiene un significado, y cada diseño
             conecta el pasado con el presente.
           </p>
+          <div class="intro-image">
+            <Picture
+              src={artesanias2}
+              alt="Textiles tradicionales de Jalieza con patrones zapotecas"
+              widths={[500, 800, 1200]}
+              formats={["avif", "webp", "png"]}
+              sizes="(max-width: 768px) 100vw, 80vw"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
       </section>
 
       <!-- Productos Destacados -->
       <section class="productos-section">
-        <h2>Nuestras Creaciones</h2>
+        <!-- <h2>Nuestras Creaciones</h2> -->
         <div class="productos-grid">
           <!-- Quexquémitl -->
-          <div class="producto-card">
+          <!--  <div class="producto-card">
             <div class="producto-image">
-              <img
-                src={pruebaImage.src}
+              <Picture
+                src={artesanias1}
                 alt="Quexquémitl tradicional de Jalieza"
+                widths={[300, 500, 700]}
+                formats={["avif", "webp", "png"]}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="producto-content">
@@ -142,15 +159,19 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
                 <span class="feature-tag">Tradicional</span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Cinturones -->
-          <div class="producto-card">
+          <!-- <div class="producto-card">
             <div class="producto-image">
-              <img
-                src={pruebaImage.src}
+              <Picture
+                src={artesanias1}
                 alt="Cinturones artesanales de Jalieza"
+                widths={[300, 500, 700]}
+                formats={["avif", "webp", "png"]}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="producto-content">
@@ -165,15 +186,19 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
                 <span class="feature-tag">Colorido</span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Caminos de Mesa -->
-          <div class="producto-card">
+          <!-- <div class="producto-card">
             <div class="producto-image">
-              <img
-                src={pruebaImage.src}
+              <Picture
+                src={artesanias1}
                 alt="Caminos de mesa artesanales"
+                widths={[300, 500, 700]}
+                formats={["avif", "webp", "png"]}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="producto-content">
@@ -188,15 +213,19 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
                 <span class="feature-tag">Hogar</span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Cosmetiqueras -->
-          <div class="producto-card">
+          <!--  <div class="producto-card">
             <div class="producto-image">
-              <img
-                src={pruebaImage.src}
+              <Picture
+                src={artesanias1}
                 alt="Cosmetiqueras tejidas a mano"
+                widths={[300, 500, 700]}
+                formats={["avif", "webp", "png"]}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="producto-content">
@@ -211,15 +240,19 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
                 <span class="feature-tag">Portátil</span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Mantelitos Individuales -->
-          <div class="producto-card">
+          <!-- <div class="producto-card">
             <div class="producto-image">
-              <img
-                src={pruebaImage.src}
+              <Picture
+                src={artesanias1}
                 alt="Mantelitos individuales tejidos"
+                widths={[300, 500, 700]}
+                formats={["avif", "webp", "png"]}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="producto-content">
@@ -234,15 +267,19 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
                 <span class="feature-tag">Elegante</span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Bolsas -->
-          <div class="producto-card">
+          <!-- <div class="producto-card">
             <div class="producto-image">
-              <img
-                src={pruebaImage.src}
+              <Picture
+                src={artesanias1}
                 alt="Bolsas artesanales de Jalieza"
+                widths={[300, 500, 700]}
+                formats={["avif", "webp", "png"]}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="producto-content">
@@ -257,7 +294,7 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
                 <span class="feature-tag">Versátil</span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -348,10 +385,14 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
             </div>
           </div>
           <div class="caracteristicas-image">
-            <img
-              src={pruebaImage.src}
+            <Picture
+              src={artesanias3}
               alt="Proceso de tejido tradicional en Jalieza"
+              widths={[400, 600, 800, 1000]}
+              formats={["avif", "webp", "png"]}
+              sizes="(max-width: 768px) 100vw, 50vw"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -399,16 +440,12 @@ TODO: CONTENIDO TEMPORALMENTE COMENTADO - PENDIENTE DE APROBACIÓN DEL CLIENTE
           cultural.
         </p>
         <div class="cta-buttons">
-          <a href="/historia" class="cta-button primary">
-            Conoce Nuestra Historia
+          <a href="/sobre-el-pueblo" class="cta-button primary">
+            Sobre el pueblo
           </a>
-          <a href="/sobre-el-pueblo" class="cta-button secondary">
-            Visita Jalieza
-          </a>
+          <a href="/#contacto" class="cta-button secondary"> Visita Jalieza </a>
         </div>
       </section>
     </div>
   </div>
 </BaseLayout>
-*/
-}
