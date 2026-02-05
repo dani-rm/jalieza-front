@@ -31,6 +31,66 @@
   margin: 0 auto;
 }
 
+/* ===== SECCIÓN DE PORTADA ===== */
+.portada-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.portada-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.portada-image:hover img {
+  transform: scale(1.05);
+}
+
+.portada-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+      rgba(195, 42, 255, 0.2) 0%,
+      rgba(139, 69, 19, 0.15) 50%,
+      rgba(0, 0, 0, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.portada-image:hover .portada-overlay {
+  opacity: 1;
+}
+
+.portada-content {
+  text-align: center;
+  color: #ffffff;
+  padding: var(--spacing-xl);
+  max-width: 90%;
+}
+
+.portada-content h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.portada-content p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgb(0, 0, 0);
+  opacity: 1;
+}
+
 /* ===== SECCIÓN DE CARDS ===== */
 .cards-section {
   margin-bottom: var(--spacing-3xl);
@@ -125,7 +185,8 @@
 }
 
 .cta-button:hover {
-  background-color: #7b1fa2; /* Puede sobrescribirse localmente si se necesita */
+  background-color: #7b1fa2;
+  /* Puede sobrescribirse localmente si se necesita */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   transform: var(--transform-hover-up-sm);
 }
@@ -135,6 +196,7 @@ html {
   scroll-padding-top: 100px;
   /* Ajusta el valor a la altura real de tu header en la sección contacto*/
 }
+
 .contact-section {
   margin-top: var(--spacing-4xl);
   padding-top: var(--spacing-3xl);
@@ -228,13 +290,21 @@ html {
   .home-main {
     padding: var(--spacing-3xl) 0;
   }
-  
+
   .hero-title {
     font-size: var(--font-size-5xl);
   }
-  
+
   .hero-description {
     font-size: var(--font-size-xl);
+  }
+
+  .carousel-container {
+    height: 450px;
+  }
+
+  .slide-content h3 {
+    font-size: var(--font-size-3xl);
   }
 }
 
@@ -242,19 +312,35 @@ html {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .carousel-container {
+    height: 500px;
+  }
 }
 
 @media (min-width: 1024px) {
   .home-main {
     padding: var(--spacing-4xl) 0;
   }
-  
+
   .hero-title {
     font-size: var(--font-size-6xl);
   }
-  
+
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .carousel-container {
+    height: 600px;
+  }
+
+  .slide-content h3 {
+    font-size: var(--font-size-4xl);
+  }
+
+  .slide-content p {
+    font-size: var(--font-size-xl);
   }
 }
 
@@ -298,9 +384,16 @@ html {
   }
 }
 
+/* Responsive específica para móviles pequeños */
+@media (max-width: 480px) {
+  .hero-carousel {
+    height: 300px;
+  }
+}
+
 /* 
 NOTA: Este archivo mantiene su independencia pero está conectado a variables globales.
 Para cambios globales: modificar variables en global.css
 Para cambios locales: sobrescribir propiedades específicas en este archivo
 Ejemplo: .cta-button:hover { background-color: #custom-color; }
-*/ 
+*/

@@ -1,6 +1,35 @@
 ---
 import BaseLayout from "../components/base/BaseLayout.astro";
+import Carousel from "../components/common/Carousel.astro";
 import "../styles/pages/home.css";
+import letrasJalieza from "../assets/images/gallery/inicio/letras-jalieza.jpg";
+import palacioJalieza from "../assets/images/gallery/inicio/palacio.jpg";
+import iglesiaJalieza from "../assets/images/gallery/inicio/iglesia.jpg";
+
+// Configuración del carrusel
+const carouselSlides = [
+  {
+    image: letrasJalieza,
+    alt: "Letrero colorido de bienvenida a Santo Tomás Jalieza con la plaza principal",
+    title: "Bienvenidos a Jalieza",
+    description:
+      "El icónico letrero colorido que da la bienvenida a nuestro hermoso pueblo",
+  },
+  {
+    image: palacioJalieza,
+    alt: "Palacio Municipal de Santo Tomás Jalieza mostrando la arquitectura simbolica",
+    title: "Palacio Municipal",
+    description:
+      "Arquitectura simbolica que preserva la historia y tradición de nuestro pueblo",
+  },
+  {
+    image: iglesiaJalieza,
+    alt: "Iglesia principal de Santo Tomás Jalieza con su arquitectura colonial",
+    title: "Iglesia Principal",
+    description:
+      "Una joya arquitectónica que refleja la herencia colonial y espiritual de Jalieza",
+  },
+];
 ---
 
 <BaseLayout title="Inicio" description="Bienvenido a Jalieza, Oaxaca">
@@ -13,6 +42,11 @@ import "../styles/pages/home.css";
           Donde cada hilo tejido guarda una historia...
         </p>
       </div>
+
+      <!-- Carrusel de Imágenes de Portada -->
+      <section class="portada-section">
+        <Carousel slides={carouselSlides} />
+      </section>
 
       <!-- Cards Section -->
       <div class="cards-section">
